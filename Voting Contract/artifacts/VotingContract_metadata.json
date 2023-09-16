@@ -1,0 +1,163 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "DonationReceived",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "candidates",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "voteCount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "candidateName",
+						"type": "string"
+					}
+				],
+				"name": "getCandidateVoteCount",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "voteCount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct VotingContract.Candidate",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "candidateName",
+						"type": "string"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "A simple voting contract that allows users to vote for candidates and donate Ether.",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Constructor to initialize the contract with two initial candidates, \"John\" and \"Paul\"."
+				},
+				"getCandidateVoteCount(string)": {
+					"details": "Function to get the current vote count and candidate's name.",
+					"params": {
+						"candidateName": "The name of the candidate to get the vote count for (\"John\" or \"Paul\")."
+					},
+					"returns": {
+						"_0": "The current vote count and name of the candidate as a Candidate struct."
+					}
+				},
+				"vote(string)": {
+					"details": "Function to allow users to vote for a candidate.",
+					"params": {
+						"candidateName": "The name of the candidate to vote for (\"John\" or \"Paul\")."
+					}
+				}
+			},
+			"title": "VotingContract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Voting Contract/Vote.sol": "VotingContract"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Voting Contract/Vote.sol": {
+			"keccak256": "0xd3d6eac33eeee63da1cf24cf3326ad9bb06641b7f2d6d32932a51dfb42a92695",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8b152ae1149cca37a249a651aab0aa610f57ec0dcd544a82aa834df56c5fb3ed",
+				"dweb:/ipfs/QmfWq1zXahDPgjMbEShzhBUNG4GA5yddgveS86Tsw61mbg"
+			]
+		}
+	},
+	"version": 1
+}
